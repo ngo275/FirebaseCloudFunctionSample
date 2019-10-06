@@ -2,10 +2,10 @@ import { Router } from "express";
 import key from './key';
 
 // @ts-ignore
-const v1 = ({ config }) => {
+const v1 = ({ db }) => {
     const api = Router();
 
-    api.use('/key', key({ config }));
+    api.use('/key', key({ db }));
 
     return api;
 }
